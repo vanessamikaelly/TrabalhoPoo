@@ -17,8 +17,11 @@ namespace Trabalho_Cadastro_de_Livro
         public Form1()
         {
             InitializeComponent();
-            /*Livro v = new Livro();
-            v.LerArquivo(); */
+            livros = Livro.LerArquivo();
+            dataGrid_livro.DataSource = livros;
+
+
+
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -52,11 +55,19 @@ namespace Trabalho_Cadastro_de_Livro
                 txt_valorvenda.Text = Convert.ToString(livro.valorvenda);
                 livros.Add(livro);
 
-                dataGrid_livro.DataSource = null;
-                dataGrid_livro.Refresh();
-                dataGrid_livro.DataSource = livros;
+                if (livro.CadastrarLivro(livro))
+                {
+                    MessageBox.Show($"Livro salvo com sucesso.");
 
-                
+                    dataGrid_livro.DataSource = null;
+                    dataGrid_livro.Refresh();
+                    dataGrid_livro.DataSource = livros;
+
+                }
+                else
+                {
+                    MessageBox.Show("Erro ao salvar livro.");
+                } 
 
             }
             catch (FormatException ex)
@@ -69,16 +80,7 @@ namespace Trabalho_Cadastro_de_Livro
             }
 
 
-            if (livro.CadastrarLivro(livro))
-            {
-                MessageBox.Show($"Livro salvo com sucesso.");
-                //MessageBox.Show(livro.LerArquivo());
-
-            }
-            else
-            {
-                MessageBox.Show("Erro ao salvar livro.");
-            }
+           
 
         }
 

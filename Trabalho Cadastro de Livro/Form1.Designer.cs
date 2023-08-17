@@ -109,12 +109,13 @@
             // 
             // dataGrid_livro
             // 
+            this.dataGrid_livro.BackgroundColor = System.Drawing.SystemColors.InactiveCaption;
             this.dataGrid_livro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid_livro.Location = new System.Drawing.Point(-1, 405);
+            this.dataGrid_livro.Location = new System.Drawing.Point(-4, 426);
             this.dataGrid_livro.Name = "dataGrid_livro";
             this.dataGrid_livro.RowHeadersWidth = 51;
             this.dataGrid_livro.RowTemplate.Height = 24;
-            this.dataGrid_livro.Size = new System.Drawing.Size(638, 184);
+            this.dataGrid_livro.Size = new System.Drawing.Size(694, 184);
             this.dataGrid_livro.TabIndex = 8;
             // 
             // cb_genero
@@ -309,8 +310,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(637, 578);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(670, 605);
             this.Controls.Add(this.txt_ano);
             this.Controls.Add(this.lb_valoraquisicao);
             this.Controls.Add(this.lb_lucro);
